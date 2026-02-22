@@ -1,0 +1,16 @@
+# ==========================================
+# VISION-2026: BURSA TRAFFIC DATASET CONFIG
+# ==========================================
+
+# 1. FIXED PATH (Matches your actual folder name with underscores)
+path: C:/Users/enesa/projeler/lead-traffic-projects/vision_2026/datasets/Bursa_Traffic_v1
+
+# 2. RELATIVE PATHS
+# Roboflow usually exports as 'train', 'valid', 'test'
+train: train/images
+val: valid/images
+test: test/images
+
+# 3. CLASS DEFINITIONS
+nc: 3
+names: ['bus', 'car', 'togg']

@@ -1,0 +1,10 @@
+project_1:
+  # POINT TO YOUR NEW YAML
+  data_yaml: "C:/Users/enesa/projeler/lead-traffic-projects/vision_2026/datasets/Bursa_Traffic_v1/data.yaml"
+  
+  base_model: "yolov8n.pt"
+  image_size: 640
+  epochs: 50           # Now we train for real
+  batch_size: 16       # Adjust based on memory
+  project_name: "vision_2026_p1"
+  run_name: "bursa_production_v1"
