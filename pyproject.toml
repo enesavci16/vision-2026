@@ -6,12 +6,12 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "ultralytics>=8.0.0",
-    "opencv-python-headless>=4.8.0",
     "pyyaml>=6.0",
     "numpy>=2.2.6",
     "filterpy>=1.4.5",
     "matplotlib>=3.10.8",
     "scipy>=1.15.3",
+    "opencv-python>=4.13.0.92",
 ]
 
 [build-system]
@@ -24,6 +24,11 @@ target-version = "py310"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/p1_detector"]
+
+[tool.uv.workspace]
+members = [
+    "experiments/proj03_speed_radar/micro_lab_homography",
+]
 
 [dependency-groups]
 dev = [
