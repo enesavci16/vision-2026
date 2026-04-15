@@ -3,15 +3,18 @@ from typing import Dict, Any, Optional
 from ultralytics import YOLO
 
 # Configure Logging (Industry Standard)
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
+
 
 class TrafficDetector:
     """
-    Adapter class for YOLOv8 to standardize interactions 
+    Adapter class for YOLOv8 to standardize interactions
     across the Vision-2026 architecture.
     """
-    
+
     def __init__(self, model_path: str = "yolov8n.pt"):
         self.model_path = model_path
         try:
@@ -28,13 +31,13 @@ class TrafficDetector:
         logger.info("🚀 Starting Training Pipeline...")
         try:
             results = self.model.train(
-                data=config['data_yaml'],
-                epochs=config['epochs'],
-                imgsz=config['image_size'],
-                batch=config['batch_size'],
-                project=config['project_name'],
-                name=config['run_name'],
-                verbose=True
+                data=config["data_yaml"],
+                epochs=config["epochs"],
+                imgsz=config["image_size"],
+                batch=config["batch_size"],
+                project=config["project_name"],
+                name=config["run_name"],
+                verbose=True,
             )
             logger.info(f"✅ Training Complete. stored in {results.save_dir}")
         except Exception as e:

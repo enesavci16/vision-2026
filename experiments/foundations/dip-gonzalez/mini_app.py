@@ -10,12 +10,13 @@ import matplotlib.gridspec as gridspec
 
 IMAGE_PATH = r"C:/Users/enesa/projeler/lead-traffic-projects/project-01/vision_2026/datasets/Bursa_Traffic_v1/train/images/taksi_08_jpg.rf.a36aebeb77df4983a5d10ee927187399.jpg"
 
-logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
 
 def timing_decorator(func):
     """Measure function execution time."""
+
     @wraps(func)
     def wrapper(*args, **kwargs):
         start = time.time()
@@ -23,6 +24,7 @@ def timing_decorator(func):
         elapsed = time.time() - start
         logger.info(f"{func.__name__} tamamlandı: {elapsed:.3f}s")
         return result
+
     return wrapper
 
 
@@ -33,10 +35,7 @@ class PlateSharpener:
         self.image_path = image_path
         self.bbox = bbox
         self.plate_crop = None
-        self.results: Dict = {
-            "preprocess": {},
-            "sharpen": {}
-        }
+        self.results: Dict = {"preprocess": {}, "sharpen": {}}
         logger.info(f"PlateSharpener oluşturuldu: {image_path}, bbox={bbox}")
 
     def load_and_crop(self) -> None:
@@ -45,7 +44,7 @@ class PlateSharpener:
         if img is None:
             raise FileNotFoundError(f"Görüntü yüklenemedi: {self.image_path}")
         x, y, w, h = self.bbox
-        self.plate_crop = img[y:y+h, x:x+w]
+        self.plate_crop = img[y : y + h, x : x + w]
         logger.info(f"Plaka crop edildi: {w}x{h} piksel")
 
     @staticmethod
@@ -60,8 +59,7 @@ class PlateSharpener:
     def create_from_config(cls, config_dict: Dict) -> "PlateSharpener":
         """Construct PlateSharpener from a config dictionary."""
         return cls(
-            image_path=config_dict["image_path"],
-            bbox=tuple(config_dict["bbox"])
+            image_path=config_dict["image_path"], bbox=tuple(config_dict["bbox"])
         )
 
     def preprocess(self, method: str) -> np.ndarray:

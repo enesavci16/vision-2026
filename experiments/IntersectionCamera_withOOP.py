@@ -4,10 +4,14 @@ logger = logging.getLogger(__name__)
 
 MAX_RESOLUTION: int = 1280
 
+
 class IntersectionCamera:
     """Kavşaktaki bir kamerayı temsil eder."""
 
-    def __init__(self, camera_id: int, location: str,
+    def __init__(
+        self,
+        camera_id: int,
+        location: str,
         resolution: int = MAX_RESOLUTION,
     ) -> None:
         self.camera_id = camera_id
