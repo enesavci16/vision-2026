@@ -2,8 +2,7 @@ import logging
 import numpy as np
 from typing import Tuple, Dict, Any
 
-# Logger configuration
-logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+# Kütüphane sadece kendi logger'ını oluşturur, konfigürasyonu ana uygulama (entry point) yapar.
 logger = logging.getLogger(__name__)
 
 # Constants
@@ -68,8 +67,8 @@ class SpeedMeasurer:
         
         return distance_km_h
 
-    def add_measurement(self, track_id: str, current_coord: Tuple[float, float], current_timestamp: float) -> None:
-        """Adds a new measurement for a tracked object and computes its current speed if possible.
+    def update(self, track_id: str, current_coord: Tuple[float, float], current_timestamp: float) -> None:
+        """Updates the tracked object's state and computes its current speed if possible.
 
         Args:
             track_id (str): Unique identifier for the tracked object.
@@ -98,31 +97,60 @@ class SpeedMeasurer:
             self._history[track_id]["last_measurement"] = (current_coord, current_timestamp)
             self._history[track_id]["count"] += 1
 
+    def get_speed(self, track_id: str) -> float:
+        """Returns the instantaneous (latest) speed of a specific track.
+        
+        Args:
+            track_id (str): Unique identifier for the tracked object.
+            
+        Returns:
+            float: The latest calculated speed in km/h. Returns 0.0 if only one measurement exists.
+            
+        Raises:
+            KeyError: If the track_id does not exist in the history.
+        """
+        if track_id not in self._history:
+            logger.error(f"Attempted to get speed for unknown track_id: {track_id}")
+            raise KeyError(f"Track ID '{track_id}' not found in records.")
+            
+        speeds = self._history[track_id]["speeds"]
+        if not speeds:
+            return 0.0
+            
+        return speeds[-1]
+
     def get_report(self) -> Dict[str, Dict[str, Any]]:
         """Generates a speed report for all tracked objects.
 
         Returns:
             Dict[str, Dict[str, Any]]: A dictionary containing average_speed, max_speed, 
                                        current_speed, and measurement_count for each track_id.
+                                       Returns an empty dictionary if no objects are tracked.
         """
         report: Dict[str, Dict[str, Any]] = {}
         
+        if not self._history:
+            logger.warning("get_report called but history is empty.")
+            return report
+        
         for track_id, data in self._history.items():
-            report[track_id] = {}
-
-            if len(data["speeds"]) > 0:
-                average_speed = sum(data["speeds"]) / len(data["speeds"])
-                max_speed = max(data["speeds"])
-                current_speed = data["speeds"][-1]
+            speeds = data["speeds"]
+            
+            if len(speeds) > 0:
+                average_speed = float(np.mean(speeds))
+                max_speed = float(np.max(speeds))
+                current_speed = speeds[-1]
             else:
                 average_speed = 0.0
                 max_speed = 0.0
                 current_speed = 0.0
 
-            report[track_id]["average_speed"] = average_speed
-            report[track_id]["max_speed"] = max_speed
-            report[track_id]["current_speed"] = current_speed
-            report[track_id]["measurement_count"] = data["count"]
+            report[track_id] = {
+                "average_speed": average_speed,
+                "max_speed": max_speed,
+                "current_speed": current_speed,
+                "measurement_count": data["count"]
+            }
 
         logger.info(f"Report generated for {len(report)} tracks.")
         return report
