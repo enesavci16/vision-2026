@@ -156,5 +156,14 @@ class SpeedMeasurer:
         return report
 
 if __name__=="__main__":
-
     logging.basicConfig(level=logging.DEBUG, format="%(name)s - %(levelname)s: %(message)s")
+    car=SpeedMeasurer(10.0)
+    car.update("car_1",(0,0),(1.0))
+    car.update("car_2",(0,10),(1.0))
+    report=car.get_report()
+    print(report)
+
+
+
+
+    

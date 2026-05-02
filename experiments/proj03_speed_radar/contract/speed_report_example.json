@@ -1,0 +1,14 @@
+{
+    "car_1": {
+        "average_speed": 3.6,
+        "max_speed": 3.6,
+        "current_speed": 3.6,
+        "measurement_count": 2
+    },
+    "car_2": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    }
+}
