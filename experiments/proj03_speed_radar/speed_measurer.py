@@ -154,3 +154,7 @@ class SpeedMeasurer:
 
         logger.info(f"Report generated for {len(report)} tracks.")
         return report
+
+if __name__=="__main__":
+
+    logging.basicConfig(level=logging.DEBUG, format="%(name)s - %(levelname)s: %(message)s")
