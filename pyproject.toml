@@ -23,7 +23,7 @@ line-length = 88
 target-version = "py310"
 
 [tool.pytest.ini_options]
-pythonpath = ["experiments/proj03_speed_radar"]
+pythonpath = ["src"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/p1_detector"]
