@@ -1,0 +1,896 @@
+{
+    "1": {
+        "average_speed": 47.22075653076172,
+        "max_speed": 156.7047576904297,
+        "current_speed": 54.621246337890625,
+        "measurement_count": 180
+    },
+    "2": {
+        "average_speed": 39.01518630981445,
+        "max_speed": 148.7095947265625,
+        "current_speed": 148.7095947265625,
+        "measurement_count": 106
+    },
+    "3": {
+        "average_speed": 32.22123336791992,
+        "max_speed": 69.8885726928711,
+        "current_speed": 69.8885726928711,
+        "measurement_count": 29
+    },
+    "4": {
+        "average_speed": 13.239147186279297,
+        "max_speed": 26.2354736328125,
+        "current_speed": 22.198532104492188,
+        "measurement_count": 13
+    },
+    "5": {
+        "average_speed": 19.740985870361328,
+        "max_speed": 48.44290542602539,
+        "current_speed": 11.63979721069336,
+        "measurement_count": 8
+    },
+    "6": {
+        "average_speed": 29.121559143066406,
+        "max_speed": 70.8318099975586,
+        "current_speed": 10.217334747314453,
+        "measurement_count": 83
+    },
+    "7": {
+        "average_speed": 32.81192398071289,
+        "max_speed": 93.93462371826172,
+        "current_speed": 49.3189582824707,
+        "measurement_count": 52
+    },
+    "8": {
+        "average_speed": 64.89863586425781,
+        "max_speed": 76.5202865600586,
+        "current_speed": 44.27568435668945,
+        "measurement_count": 5
+    },
+    "10": {
+        "average_speed": 43.59308624267578,
+        "max_speed": 78.61956024169922,
+        "current_speed": 47.79532241821289,
+        "measurement_count": 162
+    },
+    "23": {
+        "average_speed": 51.50449752807617,
+        "max_speed": 89.31461334228516,
+        "current_speed": 57.97433090209961,
+        "measurement_count": 11
+    },
+    "28": {
+        "average_speed": 35.38083267211914,
+        "max_speed": 146.14085388183594,
+        "current_speed": 5.649997711181641,
+        "measurement_count": 312
+    },
+    "29": {
+        "average_speed": 31.33963394165039,
+        "max_speed": 31.33963394165039,
+        "current_speed": 31.33963394165039,
+        "measurement_count": 2
+    },
+    "35": {
+        "average_speed": 58.52321243286133,
+        "max_speed": 62.99366760253906,
+        "current_speed": 58.31755828857422,
+        "measurement_count": 10
+    },
+    "40": {
+        "average_speed": 75.63338470458984,
+        "max_speed": 300.453369140625,
+        "current_speed": 300.453369140625,
+        "measurement_count": 20
+    },
+    "44": {
+        "average_speed": 57.36441421508789,
+        "max_speed": 88.80127716064453,
+        "current_speed": 23.724029541015625,
+        "measurement_count": 15
+    },
+    "47": {
+        "average_speed": 29.276369094848633,
+        "max_speed": 91.83777618408203,
+        "current_speed": 36.23017883300781,
+        "measurement_count": 91
+    },
+    "53": {
+        "average_speed": 53.19379806518555,
+        "max_speed": 67.73796081542969,
+        "current_speed": 50.87699890136719,
+        "measurement_count": 26
+    },
+    "55": {
+        "average_speed": 57.82658767700195,
+        "max_speed": 63.51253128051758,
+        "current_speed": 59.230987548828125,
+        "measurement_count": 11
+    },
+    "57": {
+        "average_speed": 58.003170013427734,
+        "max_speed": 735.2977905273438,
+        "current_speed": 46.67509460449219,
+        "measurement_count": 262
+    },
+    "59": {
+        "average_speed": 53.977142333984375,
+        "max_speed": 75.5208511352539,
+        "current_speed": 51.3619499206543,
+        "measurement_count": 43
+    },
+    "62": {
+        "average_speed": 53.55427169799805,
+        "max_speed": 305.69097900390625,
+        "current_speed": 218.08236694335938,
+        "measurement_count": 166
+    },
+    "69": {
+        "average_speed": 47.88076400756836,
+        "max_speed": 109.55926513671875,
+        "current_speed": 59.22735595703125,
+        "measurement_count": 114
+    },
+    "73": {
+        "average_speed": 48.938655853271484,
+        "max_speed": 280.5895080566406,
+        "current_speed": 75.08197784423828,
+        "measurement_count": 185
+    },
+    "76": {
+        "average_speed": 8.00416088104248,
+        "max_speed": 17.19403648376465,
+        "current_speed": 11.221351623535156,
+        "measurement_count": 28
+    },
+    "93": {
+        "average_speed": 11.02456283569336,
+        "max_speed": 26.82372283935547,
+        "current_speed": 9.528883934020996,
+        "measurement_count": 22
+    },
+    "95": {
+        "average_speed": 8.839195251464844,
+        "max_speed": 20.255767822265625,
+        "current_speed": 15.962238311767578,
+        "measurement_count": 34
+    },
+    "96": {
+        "average_speed": 37.971187591552734,
+        "max_speed": 352.25372314453125,
+        "current_speed": 193.9647216796875,
+        "measurement_count": 271
+    },
+    "99": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "105": {
+        "average_speed": 35.9886589050293,
+        "max_speed": 91.18045806884766,
+        "current_speed": 4.8098063468933105,
+        "measurement_count": 216
+    },
+    "110": {
+        "average_speed": 46.836647033691406,
+        "max_speed": 51.84129333496094,
+        "current_speed": 51.84129333496094,
+        "measurement_count": 3
+    },
+    "113": {
+        "average_speed": 14.74502182006836,
+        "max_speed": 185.01837158203125,
+        "current_speed": 48.93034362792969,
+        "measurement_count": 731
+    },
+    "114": {
+        "average_speed": 50.990386962890625,
+        "max_speed": 53.47818374633789,
+        "current_speed": 53.47818374633789,
+        "measurement_count": 3
+    },
+    "117": {
+        "average_speed": 27.721477508544922,
+        "max_speed": 27.721477508544922,
+        "current_speed": 27.721477508544922,
+        "measurement_count": 2
+    },
+    "119": {
+        "average_speed": 24.176971435546875,
+        "max_speed": 29.387929916381836,
+        "current_speed": 18.96601104736328,
+        "measurement_count": 3
+    },
+    "125": {
+        "average_speed": 64.74808502197266,
+        "max_speed": 72.6753921508789,
+        "current_speed": 56.82077407836914,
+        "measurement_count": 3
+    },
+    "131": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "133": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "134": {
+        "average_speed": 40.07958221435547,
+        "max_speed": 105.17762756347656,
+        "current_speed": 49.054931640625,
+        "measurement_count": 54
+    },
+    "141": {
+        "average_speed": 55.79690170288086,
+        "max_speed": 75.98960876464844,
+        "current_speed": 52.54248046875,
+        "measurement_count": 28
+    },
+    "147": {
+        "average_speed": 58.34825134277344,
+        "max_speed": 67.09610748291016,
+        "current_speed": 67.09610748291016,
+        "measurement_count": 3
+    },
+    "149": {
+        "average_speed": 20.50223731994629,
+        "max_speed": 41.5164680480957,
+        "current_speed": 11.587864875793457,
+        "measurement_count": 14
+    },
+    "171": {
+        "average_speed": 45.06086349487305,
+        "max_speed": 113.05570983886719,
+        "current_speed": 5.258133888244629,
+        "measurement_count": 156
+    },
+    "172": {
+        "average_speed": 63.65887451171875,
+        "max_speed": 63.65887451171875,
+        "current_speed": 63.65887451171875,
+        "measurement_count": 2
+    },
+    "173": {
+        "average_speed": 36.75577163696289,
+        "max_speed": 81.81782531738281,
+        "current_speed": 7.11389684677124,
+        "measurement_count": 181
+    },
+    "180": {
+        "average_speed": 35.962955474853516,
+        "max_speed": 254.07302856445312,
+        "current_speed": 70.90673828125,
+        "measurement_count": 307
+    },
+    "183": {
+        "average_speed": 53.57023239135742,
+        "max_speed": 58.727970123291016,
+        "current_speed": 54.24797439575195,
+        "measurement_count": 7
+    },
+    "184": {
+        "average_speed": 35.18296813964844,
+        "max_speed": 136.85719299316406,
+        "current_speed": 29.032424926757812,
+        "measurement_count": 206
+    },
+    "186": {
+        "average_speed": 41.50981903076172,
+        "max_speed": 52.43825912475586,
+        "current_speed": 47.93520736694336,
+        "measurement_count": 21
+    },
+    "210": {
+        "average_speed": 5.723896026611328,
+        "max_speed": 9.758157730102539,
+        "current_speed": 2.4494211673736572,
+        "measurement_count": 7
+    },
+    "213": {
+        "average_speed": 33.477596282958984,
+        "max_speed": 83.54873657226562,
+        "current_speed": 12.60731315612793,
+        "measurement_count": 236
+    },
+    "220": {
+        "average_speed": 34.8719482421875,
+        "max_speed": 237.98907470703125,
+        "current_speed": 7.156252861022949,
+        "measurement_count": 255
+    },
+    "225": {
+        "average_speed": 25.39881134033203,
+        "max_speed": 58.64571762084961,
+        "current_speed": 3.195155143737793,
+        "measurement_count": 7
+    },
+    "228": {
+        "average_speed": 13.770280838012695,
+        "max_speed": 41.48591232299805,
+        "current_speed": 10.529221534729004,
+        "measurement_count": 38
+    },
+    "232": {
+        "average_speed": 32.31800842285156,
+        "max_speed": 111.77291107177734,
+        "current_speed": 6.607588291168213,
+        "measurement_count": 277
+    },
+    "249": {
+        "average_speed": 1.6493468284606934,
+        "max_speed": 9.452587127685547,
+        "current_speed": 4.042464256286621,
+        "measurement_count": 70
+    },
+    "252": {
+        "average_speed": 1.4425647258758545,
+        "max_speed": 1.4425647258758545,
+        "current_speed": 1.4425647258758545,
+        "measurement_count": 2
+    },
+    "258": {
+        "average_speed": 30.305355072021484,
+        "max_speed": 161.99388122558594,
+        "current_speed": 42.27445602416992,
+        "measurement_count": 308
+    },
+    "260": {
+        "average_speed": 1.2356646060943604,
+        "max_speed": 1.2356646060943604,
+        "current_speed": 1.2356646060943604,
+        "measurement_count": 2
+    },
+    "264": {
+        "average_speed": 14.099348068237305,
+        "max_speed": 172.39735412597656,
+        "current_speed": 13.433952331542969,
+        "measurement_count": 53
+    },
+    "274": {
+        "average_speed": 22.66270637512207,
+        "max_speed": 112.94670867919922,
+        "current_speed": 46.91078567504883,
+        "measurement_count": 384
+    },
+    "284": {
+        "average_speed": 11.662301063537598,
+        "max_speed": 32.195316314697266,
+        "current_speed": 17.58563804626465,
+        "measurement_count": 12
+    },
+    "298": {
+        "average_speed": 34.5008430480957,
+        "max_speed": 203.84738159179688,
+        "current_speed": 10.116779327392578,
+        "measurement_count": 310
+    },
+    "304": {
+        "average_speed": 15.179118156433105,
+        "max_speed": 68.19224548339844,
+        "current_speed": 54.400272369384766,
+        "measurement_count": 537
+    },
+    "333": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "344": {
+        "average_speed": 45.47505569458008,
+        "max_speed": 111.49327087402344,
+        "current_speed": 60.466983795166016,
+        "measurement_count": 169
+    },
+    "346": {
+        "average_speed": 34.84162139892578,
+        "max_speed": 34.84162139892578,
+        "current_speed": 34.84162139892578,
+        "measurement_count": 2
+    },
+    "350": {
+        "average_speed": 50.76103973388672,
+        "max_speed": 54.66522979736328,
+        "current_speed": 54.66522979736328,
+        "measurement_count": 3
+    },
+    "358": {
+        "average_speed": 11.058816909790039,
+        "max_speed": 37.40558624267578,
+        "current_speed": 10.112436294555664,
+        "measurement_count": 40
+    },
+    "365": {
+        "average_speed": 49.364410400390625,
+        "max_speed": 49.364410400390625,
+        "current_speed": 49.364410400390625,
+        "measurement_count": 2
+    },
+    "368": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "374": {
+        "average_speed": 29.816972732543945,
+        "max_speed": 29.816972732543945,
+        "current_speed": 29.816972732543945,
+        "measurement_count": 2
+    },
+    "375": {
+        "average_speed": 8.949117660522461,
+        "max_speed": 29.66950798034668,
+        "current_speed": 14.787298202514648,
+        "measurement_count": 26
+    },
+    "390": {
+        "average_speed": 2.2876875400543213,
+        "max_speed": 45.40507888793945,
+        "current_speed": 0.3990775942802429,
+        "measurement_count": 484
+    },
+    "396": {
+        "average_speed": 25.370895385742188,
+        "max_speed": 281.8873596191406,
+        "current_speed": 48.15473937988281,
+        "measurement_count": 396
+    },
+    "400": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "405": {
+        "average_speed": 37.06940841674805,
+        "max_speed": 167.36268615722656,
+        "current_speed": 3.3690946102142334,
+        "measurement_count": 225
+    },
+    "407": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "411": {
+        "average_speed": 24.517459869384766,
+        "max_speed": 440.4112854003906,
+        "current_speed": 111.3405532836914,
+        "measurement_count": 414
+    },
+    "412": {
+        "average_speed": 5.583142280578613,
+        "max_speed": 17.009822845458984,
+        "current_speed": 0.9315823316574097,
+        "measurement_count": 36
+    },
+    "413": {
+        "average_speed": 2.827256202697754,
+        "max_speed": 13.12689208984375,
+        "current_speed": 2.5197222232818604,
+        "measurement_count": 19
+    },
+    "423": {
+        "average_speed": 26.00824546813965,
+        "max_speed": 149.6472625732422,
+        "current_speed": 4.955304145812988,
+        "measurement_count": 330
+    },
+    "426": {
+        "average_speed": 24.19428062438965,
+        "max_speed": 24.94071388244629,
+        "current_speed": 23.447847366333008,
+        "measurement_count": 3
+    },
+    "432": {
+        "average_speed": 2.703209161758423,
+        "max_speed": 15.394923210144043,
+        "current_speed": 6.1651082038879395,
+        "measurement_count": 50
+    },
+    "434": {
+        "average_speed": 35.62013244628906,
+        "max_speed": 46.71864318847656,
+        "current_speed": 37.74394226074219,
+        "measurement_count": 8
+    },
+    "435": {
+        "average_speed": 1.4305118322372437,
+        "max_speed": 5.484944820404053,
+        "current_speed": 1.6550719738006592,
+        "measurement_count": 34
+    },
+    "443": {
+        "average_speed": 59.086708068847656,
+        "max_speed": 146.75267028808594,
+        "current_speed": 50.250640869140625,
+        "measurement_count": 133
+    },
+    "444": {
+        "average_speed": 15.41709041595459,
+        "max_speed": 40.764373779296875,
+        "current_speed": 26.783447265625,
+        "measurement_count": 17
+    },
+    "445": {
+        "average_speed": 18.957773208618164,
+        "max_speed": 40.528160095214844,
+        "current_speed": 17.084449768066406,
+        "measurement_count": 41
+    },
+    "448": {
+        "average_speed": 4.275294780731201,
+        "max_speed": 7.477215766906738,
+        "current_speed": 7.477215766906738,
+        "measurement_count": 3
+    },
+    "449": {
+        "average_speed": 1.8506054878234863,
+        "max_speed": 1.8506054878234863,
+        "current_speed": 1.8506054878234863,
+        "measurement_count": 2
+    },
+    "451": {
+        "average_speed": 24.597599029541016,
+        "max_speed": 155.3844451904297,
+        "current_speed": 6.399043083190918,
+        "measurement_count": 362
+    },
+    "454": {
+        "average_speed": 14.39107608795166,
+        "max_speed": 68.22534942626953,
+        "current_speed": 64.59392547607422,
+        "measurement_count": 358
+    },
+    "458": {
+        "average_speed": 2.467327833175659,
+        "max_speed": 5.309122562408447,
+        "current_speed": 0.9173219203948975,
+        "measurement_count": 8
+    },
+    "460": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "464": {
+        "average_speed": 27.757720947265625,
+        "max_speed": 37.66361618041992,
+        "current_speed": 12.008573532104492,
+        "measurement_count": 6
+    },
+    "465": {
+        "average_speed": 1.8933950662612915,
+        "max_speed": 3.64404559135437,
+        "current_speed": 2.275796890258789,
+        "measurement_count": 5
+    },
+    "466": {
+        "average_speed": 7.099589824676514,
+        "max_speed": 10.66506290435791,
+        "current_speed": 10.66506290435791,
+        "measurement_count": 3
+    },
+    "473": {
+        "average_speed": 2.9326248168945312,
+        "max_speed": 6.5019683837890625,
+        "current_speed": 2.4962666034698486,
+        "measurement_count": 22
+    },
+    "475": {
+        "average_speed": 2.419435501098633,
+        "max_speed": 5.466050624847412,
+        "current_speed": 2.1271188259124756,
+        "measurement_count": 20
+    },
+    "481": {
+        "average_speed": 31.32185935974121,
+        "max_speed": 112.40742492675781,
+        "current_speed": 81.00614166259766,
+        "measurement_count": 252
+    },
+    "492": {
+        "average_speed": 52.93919372558594,
+        "max_speed": 287.77593994140625,
+        "current_speed": 31.714733123779297,
+        "measurement_count": 147
+    },
+    "494": {
+        "average_speed": 29.58881378173828,
+        "max_speed": 85.8792953491211,
+        "current_speed": 59.241878509521484,
+        "measurement_count": 203
+    },
+    "498": {
+        "average_speed": 19.383460998535156,
+        "max_speed": 38.087745666503906,
+        "current_speed": 35.15872573852539,
+        "measurement_count": 26
+    },
+    "499": {
+        "average_speed": 3.210766553878784,
+        "max_speed": 12.187541961669922,
+        "current_speed": 2.803093194961548,
+        "measurement_count": 61
+    },
+    "504": {
+        "average_speed": 18.847829818725586,
+        "max_speed": 38.76197052001953,
+        "current_speed": 33.37718200683594,
+        "measurement_count": 19
+    },
+    "517": {
+        "average_speed": 32.51182174682617,
+        "max_speed": 218.17050170898438,
+        "current_speed": 4.258563041687012,
+        "measurement_count": 247
+    },
+    "527": {
+        "average_speed": 18.252592086791992,
+        "max_speed": 25.059579849243164,
+        "current_speed": 25.059579849243164,
+        "measurement_count": 3
+    },
+    "536": {
+        "average_speed": 50.99129104614258,
+        "max_speed": 145.56256103515625,
+        "current_speed": 57.21567916870117,
+        "measurement_count": 182
+    },
+    "540": {
+        "average_speed": 14.069513320922852,
+        "max_speed": 21.832351684570312,
+        "current_speed": 8.64159870147705,
+        "measurement_count": 11
+    },
+    "541": {
+        "average_speed": 42.62334442138672,
+        "max_speed": 46.394954681396484,
+        "current_speed": 40.0876579284668,
+        "measurement_count": 6
+    },
+    "544": {
+        "average_speed": 71.36258697509766,
+        "max_speed": 74.03401947021484,
+        "current_speed": 66.44429779052734,
+        "measurement_count": 4
+    },
+    "548": {
+        "average_speed": 27.176790237426758,
+        "max_speed": 117.63102722167969,
+        "current_speed": 1.4687745571136475,
+        "measurement_count": 199
+    },
+    "551": {
+        "average_speed": 41.21787643432617,
+        "max_speed": 44.64580154418945,
+        "current_speed": 44.64580154418945,
+        "measurement_count": 3
+    },
+    "556": {
+        "average_speed": 18.12689971923828,
+        "max_speed": 44.30786895751953,
+        "current_speed": 24.68423843383789,
+        "measurement_count": 9
+    },
+    "566": {
+        "average_speed": 51.852298736572266,
+        "max_speed": 152.8979949951172,
+        "current_speed": 28.879581451416016,
+        "measurement_count": 113
+    },
+    "567": {
+        "average_speed": 47.196617126464844,
+        "max_speed": 57.954734802246094,
+        "current_speed": 57.954734802246094,
+        "measurement_count": 3
+    },
+    "570": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "573": {
+        "average_speed": 15.25628662109375,
+        "max_speed": 19.16117286682129,
+        "current_speed": 11.351399421691895,
+        "measurement_count": 3
+    },
+    "580": {
+        "average_speed": 32.436702728271484,
+        "max_speed": 108.84944152832031,
+        "current_speed": 36.415916442871094,
+        "measurement_count": 197
+    },
+    "582": {
+        "average_speed": 28.760353088378906,
+        "max_speed": 42.83147430419922,
+        "current_speed": 42.83147430419922,
+        "measurement_count": 5
+    },
+    "587": {
+        "average_speed": 21.636043548583984,
+        "max_speed": 34.60029220581055,
+        "current_speed": 18.5924072265625,
+        "measurement_count": 11
+    },
+    "589": {
+        "average_speed": 43.98444366455078,
+        "max_speed": 46.55973815917969,
+        "current_speed": 45.5537109375,
+        "measurement_count": 9
+    },
+    "599": {
+        "average_speed": 54.24250030517578,
+        "max_speed": 195.59066772460938,
+        "current_speed": 144.98947143554688,
+        "measurement_count": 57
+    },
+    "605": {
+        "average_speed": 31.239620208740234,
+        "max_speed": 179.18760681152344,
+        "current_speed": 2.8233883380889893,
+        "measurement_count": 176
+    },
+    "608": {
+        "average_speed": 32.576534271240234,
+        "max_speed": 128.8267059326172,
+        "current_speed": 2.5020673274993896,
+        "measurement_count": 25
+    },
+    "610": {
+        "average_speed": 18.060283660888672,
+        "max_speed": 18.060283660888672,
+        "current_speed": 18.060283660888672,
+        "measurement_count": 2
+    },
+    "618": {
+        "average_speed": 52.51113510131836,
+        "max_speed": 52.51113510131836,
+        "current_speed": 52.51113510131836,
+        "measurement_count": 2
+    },
+    "619": {
+        "average_speed": 21.029155731201172,
+        "max_speed": 21.029155731201172,
+        "current_speed": 21.029155731201172,
+        "measurement_count": 2
+    },
+    "620": {
+        "average_speed": 27.268756866455078,
+        "max_speed": 62.9473876953125,
+        "current_speed": 24.808109283447266,
+        "measurement_count": 8
+    },
+    "630": {
+        "average_speed": 21.49952507019043,
+        "max_speed": 63.630401611328125,
+        "current_speed": 15.035163879394531,
+        "measurement_count": 99
+    },
+    "638": {
+        "average_speed": 20.595388412475586,
+        "max_speed": 20.595388412475586,
+        "current_speed": 20.595388412475586,
+        "measurement_count": 2
+    },
+    "639": {
+        "average_speed": 32.719940185546875,
+        "max_speed": 87.15052032470703,
+        "current_speed": 26.32603645324707,
+        "measurement_count": 152
+    },
+    "647": {
+        "average_speed": 24.59806251525879,
+        "max_speed": 36.53834533691406,
+        "current_speed": 15.952637672424316,
+        "measurement_count": 10
+    },
+    "653": {
+        "average_speed": 25.779516220092773,
+        "max_speed": 44.30561447143555,
+        "current_speed": 39.479576110839844,
+        "measurement_count": 9
+    },
+    "659": {
+        "average_speed": 51.56794357299805,
+        "max_speed": 108.6835708618164,
+        "current_speed": 62.175514221191406,
+        "measurement_count": 101
+    },
+    "660": {
+        "average_speed": 38.871917724609375,
+        "max_speed": 82.2060546875,
+        "current_speed": 56.38276672363281,
+        "measurement_count": 125
+    },
+    "664": {
+        "average_speed": 45.06999588012695,
+        "max_speed": 141.59388732910156,
+        "current_speed": 47.15488815307617,
+        "measurement_count": 116
+    },
+    "668": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    },
+    "669": {
+        "average_speed": 23.452383041381836,
+        "max_speed": 44.617279052734375,
+        "current_speed": 32.93451690673828,
+        "measurement_count": 25
+    },
+    "679": {
+        "average_speed": 29.245433807373047,
+        "max_speed": 146.8136749267578,
+        "current_speed": 50.45075225830078,
+        "measurement_count": 41
+    },
+    "697": {
+        "average_speed": 17.194448471069336,
+        "max_speed": 29.88289451599121,
+        "current_speed": 21.009958267211914,
+        "measurement_count": 7
+    },
+    "706": {
+        "average_speed": 20.710018157958984,
+        "max_speed": 44.14270782470703,
+        "current_speed": 22.881690979003906,
+        "measurement_count": 23
+    },
+    "710": {
+        "average_speed": 57.209312438964844,
+        "max_speed": 71.70132446289062,
+        "current_speed": 56.24312973022461,
+        "measurement_count": 12
+    },
+    "711": {
+        "average_speed": 49.27444839477539,
+        "max_speed": 269.0306701660156,
+        "current_speed": 40.008113861083984,
+        "measurement_count": 57
+    },
+    "715": {
+        "average_speed": 61.83400344848633,
+        "max_speed": 76.39183044433594,
+        "current_speed": 67.95215606689453,
+        "measurement_count": 4
+    },
+    "716": {
+        "average_speed": 73.0621337890625,
+        "max_speed": 96.12039184570312,
+        "current_speed": 50.00387954711914,
+        "measurement_count": 3
+    },
+    "718": {
+        "average_speed": 42.80120086669922,
+        "max_speed": 139.5502471923828,
+        "current_speed": 23.63383674621582,
+        "measurement_count": 35
+    },
+    "722": {
+        "average_speed": 71.81017303466797,
+        "max_speed": 252.37728881835938,
+        "current_speed": 25.39716911315918,
+        "measurement_count": 16
+    },
+    "733": {
+        "average_speed": 0.0,
+        "max_speed": 0.0,
+        "current_speed": 0.0,
+        "measurement_count": 1
+    }
+}
