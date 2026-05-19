@@ -81,7 +81,7 @@ class IntersectionPipeline:
                 break
 
             timestamp = self.cap.get(cv2.CAP_PROP_POS_MSEC) / 1000.0
-            results = self.detector.model.track(frame, persist=True, verbose=False)
+            results =self.detector.model.track(frame, conf=self.confidence_thr, persist=True, verbose=False)
 
             for result in results:
                 boxes = result.boxes

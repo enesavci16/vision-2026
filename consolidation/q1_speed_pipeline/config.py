@@ -11,7 +11,6 @@ OUTPUT_DIR = r"consolidation/q1_speed_pipeline/outputs"
 OUTPUT_JSON  = r"consolidation/q1_speed_pipeline/outputs/speed_report.json"
 OUTPUT_VIDEO = r"consolidation/q1_speed_pipeline/outputs/annotated.mp4"
 
-import numpy as np
 
 SRC_POINTS = np.float32([[216, 71], [412, 73], [559, 202], [133, 209]])
 

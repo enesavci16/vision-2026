@@ -26,7 +26,7 @@ class SpeedMeasurer:
             raise ValueError("pixel_per_meter must be a positive value!")
         
         self.pixel_per_meter = pixel_per_meter
-        self._history: Dict[str, Dict[str, Any]] = {}
+        self._history: Dict[int, Dict[str, Any]] = {}
         
         logger.info(f"SpeedMeasurer initialized successfully with ratio: {self.pixel_per_meter} px/m.")
 
@@ -67,11 +67,11 @@ class SpeedMeasurer:
         
         return distance_km_h
 
-    def update(self, track_id: str, current_coord: Tuple[float, float], current_timestamp: float) -> None:
+    def update(self, track_id: int, current_coord: Tuple[float, float], current_timestamp: float) -> None:
         """Updates the tracked object's state and computes its current speed if possible.
 
         Args:
-            track_id (str): Unique identifier for the tracked object.
+            track_id (int): Unique identifier for the tracked object.
             current_coord (Tuple[float, float]): Current BEV coordinate (x, y).
             current_timestamp (float): Current timestamp in seconds.
         """
@@ -97,11 +97,11 @@ class SpeedMeasurer:
             self._history[track_id]["last_measurement"] = (current_coord, current_timestamp)
             self._history[track_id]["count"] += 1
 
-    def get_speed(self, track_id: str) -> float:
+    def get_speed(self, track_id: int) -> float:
         """Returns the instantaneous (latest) speed of a specific track.
         
         Args:
-            track_id (str): Unique identifier for the tracked object.
+            track_id (int): Unique identifier for the tracked object.
             
         Returns:
             float: The latest calculated speed in km/h. Returns 0.0 if only one measurement exists.
@@ -119,15 +119,15 @@ class SpeedMeasurer:
             
         return speeds[-1]
 
-    def get_report(self) -> Dict[str, Dict[str, Any]]:
+    def get_report(self) -> Dict[int, Dict[str, Any]]:
         """Generates a speed report for all tracked objects.
 
         Returns:
-            Dict[str, Dict[str, Any]]: A dictionary containing average_speed, max_speed, 
+            Dict[int, Dict[str, Any]]: A dictionary containing average_speed, max_speed, 
                                        current_speed, and measurement_count for each track_id.
                                        Returns an empty dictionary if no objects are tracked.
         """
-        report: Dict[str, Dict[str, Any]] = {}
+        report: Dict[int, Dict[str, Any]] = {}  # ✅
         
         if not self._history:
             logger.warning("get_report called but history is empty.")
@@ -158,12 +158,7 @@ class SpeedMeasurer:
 if __name__=="__main__":
     logging.basicConfig(level=logging.DEBUG, format="%(name)s - %(levelname)s: %(message)s")
     car=SpeedMeasurer(10.0)
-    car.update("car_1",(0,0),(1.0))
-    car.update("car_2",(0,10),(1.0))
+    car.update(1, (0, 0), 1.0)   
+    car.update(2, (0, 10), 1.0)  
     report=car.get_report()
     print(report)
-
-
-
-
-    
