@@ -1,3 +1,4 @@
+import os
 import cv2
 import logging
 from pathlib import Path
@@ -150,9 +151,8 @@ def convert_dataset_to_yolo(input_folder: str, output_folder: str, default_class
     
     output_path.mkdir(parents=True, exist_ok=True)
 
-    for txt_file in input_path.glob("*.txt"):
-        
-        img_file = txt_file.with_suffix(".jpg")
+    for img_file in input_path.glob("*.jpg"):
+        txt_file = img_file.with_suffix(".txt")
         
         if img_file.exists():
             img_width, img_height = get_image_size(str(img_file))
@@ -190,18 +190,26 @@ if __name__ == "__main__":
     # Loglama konfigürasyonunu sadece bu script ana modül olarak çalıştırıldığında devreye alıyoruz.
     logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
     
-    INPUT_DIR = r"datasets\openalpr_benchmarks\endtoend\eu"
-    OUTPUT_DIR = r"datasets\openalpr_benchmarks\endtoend\yolo_labels"
+    SUBFOLDERS = ["eu", "us", "br"]
     CLASS_ID = 0
     
-    logging.info(f"Dönüşüm işlemi başlıyor...\nKaynak: {INPUT_DIR}\nHedef: {OUTPUT_DIR}")
+    logging.info("Toplu dönüşüm işlemi başlıyor...\n" + "-"*30)
     
-    try:
-        convert_dataset_to_yolo(
-            input_folder=INPUT_DIR, 
-            output_folder=OUTPUT_DIR, 
-            default_class_id=CLASS_ID
-        )
-        logging.info("Dönüşüm başarıyla tamamlandı!")
-    except Exception as e:
-        logging.error(f"Dönüşüm sırasında beklenmeyen bir hata oluştu: {e}")
+    for folder in SUBFOLDERS:
+        # INPUT_DIR ve OUTPUT_DIR dinamik olarak oluşturuluyor
+        INPUT_DIR = os.path.join(r"datasets\openalpr_benchmarks\endtoend", folder)
+        OUTPUT_DIR = os.path.join(r"datasets\openalpr_benchmarks\endtoend\yolo_labels", folder)
+        
+        logging.info(f"[{folder.upper()}] klasörü işleniyor... (Kaynak: {INPUT_DIR})")
+        
+        try:
+            convert_dataset_to_yolo(
+                input_folder=INPUT_DIR, 
+                output_folder=OUTPUT_DIR, 
+                default_class_id=CLASS_ID
+            )
+            logging.info(f"[{folder.upper()}] dönüşümü başarıyla tamamlandı.\n")
+        except Exception as e:
+            logging.error(f"[{folder.upper()}] dönüşümü sırasında hata oluştu: {e}\n")
+            
+    logging.info("Tüm klasör işlemleri sona erdi.")
