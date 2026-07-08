@@ -72,4 +72,5 @@ experiments/foundations/**/output/
 *.pth
 *.weights
 *.onnx
-*.h5
+*.h5datasets/openalpr/
+datasets/openalpr_benchmarks/
