@@ -15,7 +15,7 @@ Tıklama sırası (4 nokta):
 
 import argparse
 import cv2
-import numpy as np
+
 
 points: list[tuple[int, int]] = []
 frame_display = None
