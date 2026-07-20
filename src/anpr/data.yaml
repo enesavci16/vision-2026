@@ -1,5 +1,4 @@
-# Ultralytics bu yolu global settings.yaml'daki DATASETS_DIR (genelde ~/datasets/) altında arayacaktır.
-path: openalpr
+path: prepared
 
 train:
   - us/images/train
@@ -17,5 +16,6 @@ test:
   - br/images/test
 
 nc: 1
+
 names:
   0: license_plate
