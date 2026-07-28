@@ -19,19 +19,23 @@ def create_directory_structure(dest_dir: Path, region: str, splits: list[str]) -
         (dest_dir / region / 'labels' / split).mkdir(parents=True, exist_ok=True)
 
 def process_and_split_region(
-    region_path: Path, 
-    dest_path: Path, 
-    region_name: str, 
+    images_path: Path,
+    labels_path: Path,
+    dest_path: Path,
+    region_name: str,
     split_ratios: tuple[float, float, float],
     base_seed: int
 ) -> dict[str, int]:
-    """Validates, shuffles, and copies region data into stratified target splits.
+    """Validates, shuffles, and copies region data from separate image and label sources
+    into stratified target splits.
 
-    This function ensures that image-label pairs remain intact and prevents 
-    data leakage by purging the target directory before copying.
+    This function ensures that image-label pairs remain intact by cross-checking
+    separate source directories and prevents data leakage by purging the target
+    directory before copying.
 
     Args:
-        region_path (Path): Path to the source region directory.
+        images_path (Path): Path to the source region directory containing images.
+        labels_path (Path): Path to the source region directory containing YOLO label text files.
         dest_path (Path): Path to the target root directory.
         region_name (str): Name of the region being processed.
         split_ratios (tuple[float, float, float]): Ratios for (train, val, test).
@@ -46,16 +50,16 @@ def process_and_split_region(
         shutil.rmtree(region_dest)
 
     valid_extensions = {'.jpg', '.jpeg', '.png'}
-    images = sorted([f for f in region_path.iterdir() if f.is_file() and f.suffix.lower() in valid_extensions])
-    
+    images = sorted([f for f in images_path.iterdir() if f.is_file() and f.suffix.lower() in valid_extensions])
+
     valid_pairs: list[tuple[Path, Path]] = []
     for img in images:
-        txt_file = img.with_suffix('.txt')
+        txt_file = labels_path / f"{img.stem}.txt"
         if txt_file.exists():
             valid_pairs.append((img, txt_file))
         else:
-            logger.warning(f"Missing label detected and skipped: {img.name}")
-            
+            logger.warning(f"Missing label detected and skipped for image: {img.name}")
+
     total_valid = len(valid_pairs)
     if total_valid == 0:
         logger.warning(f"No valid data found for region '{region_name}'.")
@@ -65,58 +69,76 @@ def process_and_split_region(
 
     rng = random.Random(f"{base_seed}_{region_name}")
     rng.shuffle(valid_pairs)
-    
+
     train_end = int(total_valid * split_ratios[0])
     val_end = train_end + int(total_valid * split_ratios[1])
-    
+
     splits_data = {
         'train': valid_pairs[:train_end],
         'val': valid_pairs[train_end:val_end],
         'test': valid_pairs[val_end:]
     }
-    
+
     for split_name, pairs in splits_data.items():
         for img_path, txt_path in pairs:
             shutil.copy2(img_path, region_dest / 'images' / split_name / img_path.name)
             shutil.copy2(txt_path, region_dest / 'labels' / split_name / txt_path.name)
-            
+
     return {k: len(v) for k, v in splits_data.items()}
 
 def main() -> None:
-    """Main execution flow for splitting the OpenALPR dataset into YOLOv8 format."""
+    """Main execution flow for splitting the OpenALPR dataset into YOLOv8 format from separate sources."""
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S"
     )
-    
-    parser = argparse.ArgumentParser(description="Splits OpenALPR dataset into YOLOv8 format.")
-    parser.add_argument("--source", type=str, required=True, help="Source directory containing raw data.")
+
+    parser = argparse.ArgumentParser(description="Splits OpenALPR dataset into YOLOv8 format from separate sources.")
+    parser.add_argument("--images-source", type=str, required=True, help="Root directory containing region image folders.")
+    parser.add_argument("--labels-source", type=str, required=True, help="Root directory containing region label folders.")
     parser.add_argument("--dest", type=str, required=True, help="Target directory for the YOLO dataset.")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility.")
-    
+
     args = parser.parse_args()
 
-    source_dir = Path(args.source)
+    images_source_dir = Path(args.images_source)
+    labels_source_dir = Path(args.labels_source)
     dest_dir = Path(args.dest)
     split_ratios = (0.7, 0.1, 0.2)
     regions = ['eu', 'us', 'br']
 
-    if not source_dir.exists():
-        logger.error(f"Source directory not found: {source_dir}")
+    if not images_source_dir.exists():
+        logger.error(f"Images source directory not found: {images_source_dir}")
+        return
+    if not labels_source_dir.exists():
+        logger.error(f"Labels source directory not found: {labels_source_dir}")
         return
 
     logger.info("Starting dataset organization and splitting process...")
-    
+
     final_stats = {}
 
     for region in regions:
-        region_path = source_dir / region
-        if region_path.exists() and region_path.is_dir():
-            stats = process_and_split_region(region_path, dest_dir, region, split_ratios, args.seed)
+        region_img_path = images_source_dir / region
+        region_lbl_path = labels_source_dir / region
+
+        if region_img_path.exists() and region_img_path.is_dir():
+            if not region_lbl_path.exists() or not region_lbl_path.is_dir():
+                logger.warning(f"Labels folder missing for region '{region}' at {region_ll_path}. Skipping.")
+                continube
+
+            stats = process_and_split_region(
+                region_img_path,
+                region_lbl_path,
+                dest_dir,
+                region,
+                split_ratios,
+                args.seed
+            )
             final_stats[region] = stats
         else:
-            logger.warning(f"Region folder skipped (not found): {region_path}")
+            logger.warning(f"Region image folder skipped (not found): {region_img_path}")
 
     logger.info("--- PROCESS SUMMARY ---")
     for reg, stats in final_stats.items():
